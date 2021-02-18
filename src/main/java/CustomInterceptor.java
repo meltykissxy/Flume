@@ -3,7 +3,10 @@ import org.apache.flume.Event;
 import org.apache.flume.interceptor.Interceptor;
 
 import java.util.List;
-
+/**
+* 什么情况下使用initialize和close方法呢？
+* 在拦截器中读取外部数据例如Redis等数据时，在initialize中建立连接，在close中关闭连接
+*/
 public class CustomInterceptor implements Interceptor {
 
 
